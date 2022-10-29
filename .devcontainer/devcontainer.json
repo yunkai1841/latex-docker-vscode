@@ -68,5 +68,6 @@
     "editor.tabSize": 2
   },
   "workspaceMount": "source=${localWorkspaceFolder}/work,target=/workspaces,type=bind,consistency=cached",
-  "workspaceFolder": "/workspaces"
+  "workspaceFolder": "/workspaces",
+  "remoteUser": "vscode"
 }
