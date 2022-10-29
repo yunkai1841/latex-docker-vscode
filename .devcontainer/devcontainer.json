@@ -1,34 +1,71 @@
 {
   "name": "latex-in-docker-on-vscode",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerFile": "Dockerfile",
   "extensions": [
     "james-yu.latex-workshop"
   ],
-  "service": "texlive-ja",
+  // vscode settings
   "settings": {
-    "terminal.integrated.shell": "/bin/bash",
-    "latex-workshop.latex.autoBuild.interval": 0,
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.latex.recipes": [
-      {
-        "name": "latexmk 🔃",
-        "tools": ["latexmk"]
-      }
-    ],
+    // latex-workshop
     "latex-workshop.latex.tools": [
       {
-        "name": "latexmk",
-        "command": "latexmk",
-        "args": ["-silent", "%DOC%"],
-        "env": {}
+        "name": "uplatex",
+        "command": "uplatex",
+        "args": [
+          "-interaction=nonstopmode",
+          "-synctex=1",
+          "%DOC%"
+        ]
+      },
+      {
+        "name": "dvipdfmx",
+        "command": "dvipdfmx",
+        "args": [
+          "%DOCFILE%.dvi"
+        ]
+      },
+      {
+        "name": "ptex2pdf",
+        "command": "ptex2pdf",
+        "args": [
+          "-u",
+          "-l",
+          "-ot",
+          "-synctex=1 -file-line-error",
+          "%DOCFILE%.tex"
+        ]
       }
     ],
-    "latex-workshop.latexindent.path": "/usr/local/texlive/2020/bin/x86_64-linux/latexindent",
-    "latex-workshop.message.update.show": false,
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "latex-workshop.view.pdf.viewer": "tab"
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "uplatex",
+        "tools": [
+          "uplatex",
+          "uplatex",
+          "dvipdfmx"
+        ]
+      },
+      {
+        "name": "ptex2pdf",
+        "tools": [
+          "ptex2pdf",
+          "ptex2pdf"
+        ]
+      },
+    ],
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.build.clearLog.everyRecipeStep.enabled": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.clean.fileTypes": [
+      "*.aux","*.bbl","*.blg","*.idx","*.ind",
+      "*.lof","*.lot","*.out","*.toc","*.acn",
+      "*.acr","*.alg","*.glg","*.glo","*.gls",
+      "*.ist","*.fls","*.log","*.fdb_latexmk",
+      "*.snm","*.nav","*.dvi"
+    ],
+    // other
+    "editor.tabSize": 2
   },
   "workspaceFolder": "/workdir",
-  "shutdownAction": "stopCompose"
 }
