@@ -67,14 +67,6 @@
     // other
     "editor.tabSize": 2
   },
-  "workspaceMount": "source=${localWorkspaceFolder}/work,target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-
-  // Mount the local fonts directory to the container
-  // on Linux, this is usually /usr/share/fonts
-  // on Windows, this is usually C:\Windows\Fonts
-  // on macOS, this is usually /System/Library/Fonts
-  "mounts": [
-    "source=/Windows/Fonts,target=/mnt/c/Windows/Fonts,type=bind,consistency=cached,readonly"
-  ]
+  "workspaceMount": "source=${localWorkspaceFolder}/work,target=/workspaces,type=bind,consistency=cached",
+  "workspaceFolder": "/workspaces"
 }
