@@ -53,7 +53,7 @@
         ]
       }
     ],
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.build.clearLog.everyRecipeStep.enabled": false,
     "latex-workshop.view.pdf.viewer": "tab",
@@ -68,6 +68,5 @@
     "editor.tabSize": 2
   },
   "workspaceMount": "source=${localWorkspaceFolder}/work,target=/workspaces,type=bind,consistency=cached",
-  "workspaceFolder": "/workspaces",
-  "remoteUser": "vscode"
+  "workspaceFolder": "/workspaces"
 }
