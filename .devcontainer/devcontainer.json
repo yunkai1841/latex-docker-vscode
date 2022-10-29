@@ -51,7 +51,7 @@
           "ptex2pdf",
           "ptex2pdf"
         ]
-      },
+      }
     ],
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "latex-workshop.latex.autoClean.run": "onBuilt",
@@ -67,5 +67,5 @@
     // other
     "editor.tabSize": 2
   },
-  "workspaceFolder": "/workdir",
+  "workspaceFolder": "/workdir"
 }
