@@ -65,7 +65,9 @@
       "*.snm","*.nav","*.dvi"
     ],
     // other
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.fontFamily": "Consolas, 'Courier New', 游明朝",
+    "editor.fontSize": 16
   },
   "workspaceMount": "source=${localWorkspaceFolder}/work,target=/workspaces,type=bind,consistency=cached",
   "workspaceFolder": "/workspaces"
