@@ -66,6 +66,7 @@
     ],
     // other
     "editor.tabSize": 2,
+    "editor.detectIndentation": false,
     "editor.fontFamily": "Consolas, 'Courier New', 游明朝",
     "editor.fontSize": 16
   },
