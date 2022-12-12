@@ -2,11 +2,14 @@
 
 Docker + Visual Studio Code で快適な LaTeX 執筆環境を構築するリポジトリ
 
-以下の Docker イメージをベースとしている。TeX Live 2022 を使用。
+以下の Docker イメージをベースとしている。~TeX Live 2022 を使用。~
+Tex Liveが配布しているdocker imageを使用。
 
 - Docker image
-  - GitHub: [nukopy/ubuntu-texlive-ja](https://github.com/nukopy/ubuntu-texlive-ja)
-  - Docker Hub: [nukopy/ubuntu-texlive-ja](https://hub.docker.com/repository/docker/nukopy/ubuntu-texlive-ja)
+  - ~GitHub: [nukopy/ubuntu-texlive-ja](https://github.com/nukopy/ubuntu-texlive-ja)~
+  - ~Docker Hub: [nukopy/ubuntu-texlive-ja](https://hub.docker.com/repository/docker/nukopy/ubuntu-texlive-ja)~
+  - Docker Hub: [texlive/texlive](https://hub.docker.com/r/texlive/texlive)
+  - Original texlive: [texlive](https://tug.org/texlive/)
 
 ## このリポジトリの目的
 
